@@ -1,0 +1,22 @@
+{
+  "bg0": "https://wallpapercave.com/wp/wp2533054.jpg",
+  "bg1": "https://wallpapercave.com/wp/wp2533041.jpg",
+  "bg2": "https://wallpapercave.com/wp/wp2533044.jpg",
+  "bg": "./images/teste-bg--1024x576.png",
+  "logo": "https://ava.univesp.br/branding/_1_1/loginLogo/CustomLoginLogo.png?m=kk5it76l",
+  "title": "Quiz da Engenharia da Computação",
+  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "theme": {
+    "colors": {
+      "primary": "#00695f",
+      "secondary": "green",
+      "corner": "#5393ff",
+      "mainBg": "#37474f",
+      "mainBgUnivesp": "#262626",
+      "contrastText": "#FFFFFF",
+      "wrong": "#FF5722",
+      "success": "#4CAF50"
+    },
+    "borderRadius": "4px"
+  }
+}
