@@ -1,6 +1,6 @@
 import React from 'react';
 import QuizPage from '../../src/components/QuizPage'
-import db from '../../db.json'
+import db from '../../dbQuestions.json'
 
 export default function Quiz({externalQuestions}) {
     return (

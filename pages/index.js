@@ -34,15 +34,15 @@ export default function Home() {
             <h1>Titulo Quiz</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function (infosDoEvento) {
-              infosDoEvento.preventDefault();
+            <form onSubmit={function (event) {
+              event.preventDefault();
               router.push(`/quiz?name=${name}`);
               console.log('Fazendo uma submissão por meio do react');
             }}
             >
               <Input
                 name="nomeDoUsuario"
-                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
+                onChange={(event) => setName(event.target.value)}
                 placeholder="Informe seu nome para pontuação"
                 value={name}
               />

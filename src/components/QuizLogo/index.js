@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 const H3 = styled.h3`
   background: none;
   text-align: center;
+  img {
+    width: 40%;
+  }
 `;
 
 function Logo({ logoImage }) {

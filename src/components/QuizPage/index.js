@@ -22,6 +22,7 @@ function ResultWidget({ results, name }) {
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         Tela de Resultado:
       </Widget.Header>
 
@@ -36,7 +37,9 @@ function ResultWidget({ results, name }) {
             }
             return somatoriaAtual;
           }, 0)} */}
-          {results.filter((x) => x).length}
+          Acertou {results.filter((x) => x).length}
+          {' '}
+          de {results.length}
           {' '}
           perguntas
         </p>
@@ -209,7 +212,7 @@ export default function QuizPage({questions}) {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-        <QuizLogo />
+        <QuizLogo logoImage={db.logo}/>
         {screenState === screenStates.QUIZ && (
           <QuestionWidget
             question={question}
@@ -224,7 +227,7 @@ export default function QuizPage({questions}) {
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} name={name} />}
 
-        <Widget>
+        {/* <Widget>
           <Widget.Content>
             <CaixaFlex>
               <button onClick={() => setScreenState(screenStates.QUIZ)}>QUIZ</button>
@@ -232,7 +235,7 @@ export default function QuizPage({questions}) {
               <button onClick={() => setScreenState(screenStates.RESULT)}>RESULT</button>
             </CaixaFlex>
           </Widget.Content>  
-        </Widget>  
+        </Widget>   */}
 
       </QuizContainer>
     </QuizBackground>

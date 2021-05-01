@@ -1,9 +1,9 @@
 {
     "questions": [
         {
-            "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+            "image": "https://www.chiefofdesign.com.br/wp-content/uploads/2018/08/thumbs-YT-HTML.png",
             "title": "Como fazer um seletor por id via CSS?",
-            "description": "Essa é pra aquecer",
+            "description": "Essa é pra aquecer!",
             "answer": 2,
             "alternatives": [
                 ".elemento",
@@ -13,9 +13,9 @@
             ]
         },
         {
-            "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+            "image": "https://www.chiefofdesign.com.br/wp-content/uploads/2018/08/thumbs-YT-HTML.png",
             "title": "Como fazer um background gradiente com css?",
-            "description": "Faz tempo em haha",
+            "description": "Essa é classica...",
             "answer": 0,
             "alternatives": [
                 "background: linear-gradient(#e66465, #9198e5);",
@@ -23,9 +23,9 @@
             ]
         },
         {
-            "image": "",
+            "image": "https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1521098155260-OD3QNLD1RK7DGPWMCUA6/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/js.jpg?format=250w",
             "title": "Na linguagem JavaScript, qual a diferença entre = , == e === ?",
-            "description": "",
+            "description": "Poucos acertam!",
             "answer": 2,
             "alternatives": [
                 "São a mesma coisa",
