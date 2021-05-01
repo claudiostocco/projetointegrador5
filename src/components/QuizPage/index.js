@@ -9,6 +9,7 @@ import QuizContainer from '../QuizContainer';
 import AlternativesForm from '../AlternativesForm';
 import Button from '../Button';
 import BackLinkArrow from '../BackLinkArrow';
+import { useRouter } from "next/router";
 
 const CaixaFlex = styled.div`
                     display: flex;
@@ -17,20 +18,29 @@ const CaixaFlex = styled.div`
                     width: 250px;
                   `;
 
+const CaixaCentralizada = styled.div`
+display: flex;
+justify-content: center;
+margin: auto;
+width: 100%;
+`;
+
 
 function ResultWidget({ results, name }) {
+  const router = useRouter()
   return (
-    <Widget>
-      <Widget.Header>
-        <BackLinkArrow href="/" />
+    <div>
+      <Widget>
+        <Widget.Header>
+          <BackLinkArrow href="/" />
         Tela de Resultado:
       </Widget.Header>
 
-      <Widget.Content>
-        <p>
-          Pontuação para {name}:
+        <Widget.Content>
+          <p>
+            Pontuação para {name}:
           {' '}
-          {/* {results.reduce((somatoriaAtual, resultAtual) => {
+            {/* {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
             if (isAcerto) {
               return somatoriaAtual + 1;
@@ -38,26 +48,36 @@ function ResultWidget({ results, name }) {
             return somatoriaAtual;
           }, 0)} */}
           Acertou {results.filter((x) => x).length}
-          {' '}
+            {' '}
           de {results.length}
-          {' '}
+            {' '}
           perguntas
         </p>
-        <ul>
-          {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              #
-              {index + 1}
-              {' '}
+          <ul>
+            {results.map((result, index) => (
+              <li key={`result__${result}`}>
+                #
+                {index + 1}
+                {' '}
               Resultado:
-              {result === true
-                ? 'Acertou'
-                : 'Errou'}
-            </li>
-          ))}
-        </ul>
-      </Widget.Content>
-    </Widget>
+                {result === true
+                  ? 'Acertou'
+                  : 'Errou'}
+              </li>
+            ))}
+          </ul>
+        </Widget.Content>
+      </Widget>
+      <Widget>
+        <Widget.Content>
+          <CaixaCentralizada>
+            <Button type='button' onClick={() => {router.push(`/newQuestion?name=${name}`)}}>Adicionar minhas questões</Button>
+            {/* <button onClick={() => setScreenState(screenStates.LOADING)}>LOADING</button>
+            <button onClick={() => setScreenState(screenStates.RESULT)}>RESULT</button> */}
+          </CaixaCentralizada>
+        </Widget.Content>
+      </Widget>
+    </div>
   );
 }
 
