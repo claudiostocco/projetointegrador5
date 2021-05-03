@@ -31,7 +31,7 @@ export default function Home() {
         <QuizLogo logoImage={db.logo}/>
         <Widget>
           <Widget.Header>
-            <h1>Titulo Quiz</h1>
+            <h1>Quiz da Engenharia da Computação</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={function (event) {

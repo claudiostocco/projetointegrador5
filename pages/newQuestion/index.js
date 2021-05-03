@@ -8,6 +8,7 @@ import QuizBackground from '../../src/components/QuizBackground';
 import QuizContainer from '../../src/components/QuizContainer';
 import Button from '../../src/components/Button';
 import BackLinkArrow from '../../src/components/BackLinkArrow';
+import CadastroQuestao from '../../src/components/CadastroQuestao';
 
 const CaixaFlex = styled.div`
                     display: flex;
@@ -27,6 +28,11 @@ export default function NewQuestion() {
               <BackLinkArrow href='/' />
               Incluir nova questão
           </Widget.Header>
+          <Widget.Content>
+              <CadastroQuestao/>
+          </Widget.Content>  
+        </Widget>
+        <Widget>
           <Widget.Content>
             <CaixaFlex>
                 <Button type='submit'>Incluir</Button>
