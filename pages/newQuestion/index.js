@@ -16,23 +16,25 @@ export default function NewQuestion() {
           <QuizContainer>
             <QuizLogo logoImage={db.logo}/>
     
-          <Widget>
-            <Widget.Header>
-                <BackLinkArrow href='/' />
-                Incluir nova questão
-            </Widget.Header>
-            <Widget.Content>
-                <CadastroQuestao.Questao/>
-            </Widget.Content>  
-            <Widget.Content>
-                <CadastroQuestao.Opcoes/>
-            </Widget.Content>  
-          </Widget>
-          <Widget>
-            <Widget.Content>
-              <CadastroQuestao.Botao/>
-            </Widget.Content>  
-          </Widget>
+            <Widget>
+              <Widget.Header>
+                  <BackLinkArrow href='/' />
+                  Incluir nova questão
+              </Widget.Header>
+              <CadastroQuestao>
+                <Widget.Content>
+                    <CadastroQuestao.Questao/>
+                </Widget.Content>  
+                <Widget.Content>
+                    <CadastroQuestao.Opcoes/>
+                </Widget.Content>  
+              </CadastroQuestao>
+            </Widget>
+            <Widget>
+              <Widget.Content>
+                <CadastroQuestao.Botao/>
+              </Widget.Content>  
+            </Widget>
           </QuizContainer>
         </QuizBackground>
         )
