@@ -33,6 +33,18 @@
                 "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável.",
                 "O = significa atribuição de valor. Já == e === tem a mesma função, verificar a igualdade do valor."
             ]
+        },
+        {
+            "title": "Olhando de frente para o transistor BC547, qual é a sequência de terminais?",
+            "description": "Não é difícil!",
+            "image": "https://www.tecnotronics.com.br/wp-content/uploads/2019/02/BC547_A.jpg",
+            "answer": "2",
+            "alternatives": [
+                "B,C,E",
+                "C,B,E",
+                "E,B,C",
+                "B,E,C"
+            ]
         }
     ],
     "external": []

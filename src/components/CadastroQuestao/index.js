@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Button from '../Button'
 import Input from '../Input'
 import Widget from '../Widget'
-import dbQ from '../../../dbQuestions.json'
 
 const CaixaFlex = styled.div`
                     display: flex;
@@ -43,15 +42,16 @@ const CadastroQuestao = ({ children, ...props }) => {
 
     const handleIncluir = () => {
         console.log('Titulo: ',titulo,'\nResposta: ',resposta,'\nOpções: ',opcoes)
-        // const newQ = {
-        //     image: urlImg,
-        //     title: titulo,
-        //     description: descricao,
-        //     answer: resposta,
-        //     alternatives: [
-            
-        //     ]
-        // }
+        const newQ = {
+            alternatives: opcoes.filter(value => value != ''),
+            answer: resposta,
+            description: descricao,
+            title: titulo,
+            image: urlImg
+        }
+        console.log('\n');
+        console.log(newQ)
+
     }
 
     return (
