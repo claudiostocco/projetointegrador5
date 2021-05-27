@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 import Button from '../Button'
 import Input from '../Input'
 import Widget from '../Widget'
@@ -22,10 +23,10 @@ const CadastroQuestao = ({ children, ...props }) => {
         )
     }
 
-    const [titulo, setTitulo] = React.useState('')
-    const [descricao, setDescricao] = React.useState('')
-    const [urlImg, setUrlImg] = React.useState('')
-    const [resposta, setResposta] = React.useState('')
+    const [titulo, setTitulo] = useState('')
+    const [descricao, setDescricao] = useState('')
+    const [urlImg, setUrlImg] = useState('')
+    const [resposta, setResposta] = useState('')
     const handleSetResposta = event => {
         const resp = Number.parseInt(event.target.value)
         Number.isInteger(resp) ?
@@ -33,25 +34,29 @@ const CadastroQuestao = ({ children, ...props }) => {
             :
             alert('Valor inválido!')
     }
-    const [opcoes, setOpcoes] = React.useState(["", "", "", ""])
+    const [opcoes, setOpcoes] = useState(["", "", "", ""])
     const handleNovaOp = (e, i) => {
         const opcoesNova = [...opcoes]
         opcoesNova[i] = e.target.value
         setOpcoes(opcoesNova)
     }
 
-    const handleIncluir = () => {
+    const handleIncluir = async () => {
         console.log('Titulo: ',titulo,'\nResposta: ',resposta,'\nOpções: ',opcoes)
         const newQ = {
             alternatives: opcoes.filter(value => value != ''),
-            answer: resposta,
+            answer: Number.parseInt(resposta)-1,
             description: descricao,
             title: titulo,
             image: urlImg
         }
+        // console.log();
         console.log('\n');
         console.log(newQ)
 
+        const status = await axios.post(`${document.location.origin}/api/dbQuestions`,newQ)
+        console.log('\n')
+        console.log(status)
     }
 
     return (
