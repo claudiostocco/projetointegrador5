@@ -44,11 +44,11 @@ const CadastroQuestao = ({ children, ...props }) => {
     const handleIncluir = async () => {
         console.log('Titulo: ',titulo,'\nResposta: ',resposta,'\nOpções: ',opcoes)
         const newQ = {
-            alternatives: opcoes.filter(value => value != ''),
-            answer: Number.parseInt(resposta)-1,
-            description: descricao,
+            image: urlImg,
             title: titulo,
-            image: urlImg
+            description: descricao,
+            answer: Number.parseInt(resposta)-1,
+            alternatives: opcoes.filter(value => value != '')
         }
         // console.log();
         console.log('\n');
@@ -57,6 +57,9 @@ const CadastroQuestao = ({ children, ...props }) => {
         const status = await axios.post(`${document.location.origin}/api/dbQuestions`,newQ)
         console.log('\n')
         console.log(status)
+        if (status.status == 200) {
+            alert('Questão incluída com sucesso!')
+        }
     }
 
     return (

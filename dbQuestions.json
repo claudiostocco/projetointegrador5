@@ -1,1 +1,63 @@
-{"questions":[{"image":"https://www.chiefofdesign.com.br/wp-content/uploads/2018/08/thumbs-YT-HTML.png","title":"Como fazer um seletor por id via CSS?","description":"Essa é pra aquecer!","answer":2,"alternatives":[".elemento","*elemento","#elemento","%elemento"]},{"image":"https://www.chiefofdesign.com.br/wp-content/uploads/2018/08/thumbs-YT-HTML.png","title":"Como fazer um background gradiente com css?","description":"Essa é classica...","answer":0,"alternatives":["background: linear-gradient(#e66465, #9198e5);","background: gradient(#e66465, #9198e5);"]},{"image":"https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1521098155260-OD3QNLD1RK7DGPWMCUA6/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/js.jpg?format=250w","title":"Na linguagem JavaScript, qual a diferença entre = , == e === ?","description":"Poucos acertam!","answer":2,"alternatives":["São a mesma coisa","O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === não existe.","O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável.","O = significa atribuição de valor. Já == e === tem a mesma função, verificar a igualdade do valor."]},{"title":"Olhando de frente para o transistor BC547, qual é a sequência de terminais?","description":"Não é difícil!","image":"https://www.tecnotronics.com.br/wp-content/uploads/2019/02/BC547_A.jpg","answer":1,"alternatives":["B,C,E","C,B,E","E,B,C","B,E,C"]}],"external":[]}
+{
+    "questions": [
+        {
+            "image": "https://www.chiefofdesign.com.br/wp-content/uploads/2018/08/thumbs-YT-HTML.png",
+            "title": "Como fazer um seletor por id via CSS?",
+            "description": "Essa é pra aquecer!",
+            "answer": 2,
+            "alternatives": [
+                ".elemento",
+                "*elemento",
+                "#elemento",
+                "%elemento"
+            ]
+        },
+        {
+            "image": "https://www.chiefofdesign.com.br/wp-content/uploads/2018/08/thumbs-YT-HTML.png",
+            "title": "Como fazer um background gradiente com css?",
+            "description": "Essa é classica...",
+            "answer": 0,
+            "alternatives": [
+                "background: linear-gradient(#e66465, #9198e5);",
+                "background: gradient(#e66465, #9198e5);"
+            ]
+        },
+        {
+            "image": "https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1521098155260-OD3QNLD1RK7DGPWMCUA6/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/js.jpg?format=250w",
+            "title": "Na linguagem JavaScript, qual a diferença entre = , == e === ?",
+            "description": "Poucos acertam!",
+            "answer": 2,
+            "alternatives": [
+                "São a mesma coisa",
+                "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === não existe.",
+                "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável.",
+                "O = significa atribuição de valor. Já == e === tem a mesma função, verificar a igualdade do valor."
+            ]
+        },
+        {
+            "title": "Olhando de frente para o transistor BC547, qual é a sequência de terminais?",
+            "description": "Não é difícil!",
+            "image": "https://www.tecnotronics.com.br/wp-content/uploads/2019/02/BC547_A.jpg",
+            "answer": 1,
+            "alternatives": [
+                "B,C,E",
+                "C,B,E",
+                "E,B,C",
+                "B,E,C"
+            ]
+        },
+        {
+            "alternatives": [
+                "Amplificar o sinal que vem de R2",
+                "Atuar como comparador",
+                "Atuar como chave para o LED",
+                "Fornecer energia para o LED"
+            ],
+            "answer": 2,
+            "description": "Se quiser saber mais consulte: https://www.newtoncbraga.com.br/index.php/circuitos-no-multisim-blue/254-controles-e-drivers/10756-transistor-como-chave-msb054",
+            "title": "Para o transistor da imagem acima, qual é a função do transistor?",
+            "image": "https://www.newtoncbraga.com.br/images/stories/circuitos/msb0054_0001.png"
+        }
+    ],
+    "external": []
+}
