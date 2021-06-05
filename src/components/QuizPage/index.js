@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'
 import db from '../../../db.json';
 import Widget from '../Widget';
@@ -28,6 +28,40 @@ width: 100%;
 
 function ResultWidget({ results, name }) {
   const router = useRouter()
+  // const [ranking,setRanking] = useState([])
+  let ranking = []
+  const verificaAcertos = () => {
+    const hits = results.filter((x) => x).length
+    const enjoyment = hits / results.length
+    const newRanking = {
+      name,
+      questions: results.length,
+      hits,
+      enjoyment
+    }
+    console.log(newRanking)
+    const rankingPosition = [
+      {name: newRanking.name, enjoyment: newRanking.enjoyment},
+      {name: "Fulano 1", enjoyment: 0.6},
+      {name: "Fulano 2", enjoyment: 0.5},
+      {name: "Fulano 3", enjoyment: 0.4},
+      {name: "Fulano 4", enjoyment: 0.3},
+    ]
+    console.log('\n')
+    console.log(rankingPosition)
+    ranking = rankingPosition
+    //setRanking(rankingPosition)
+
+    // const status = await axios.post(`${document.location.origin}/api/dbRanking`,ranking)
+    // console.log('\n')
+    // console.log(status)
+    // if (status.status == 200) {
+    //   console.log(status.data)
+    //     //alert('Questão incluída com sucesso!')
+    // }
+
+    return hits
+  }
   return (
     <div>
       <Widget>
@@ -47,7 +81,7 @@ function ResultWidget({ results, name }) {
             }
             return somatoriaAtual;
           }, 0)} */}
-          Acertou {results.filter((x) => x).length}
+          Acertou {verificaAcertos()}
             {' '}
           de {results.length}
             {' '}
@@ -55,7 +89,7 @@ function ResultWidget({ results, name }) {
         </p>
           <ul>
             {results.map((result, index) => (
-              <li key={`result__${result}`}>
+              <li key={`result__${index}`}>
                 #
                 {index + 1}
                 {' '}
@@ -65,6 +99,22 @@ function ResultWidget({ results, name }) {
                   : 'Errou'}
               </li>
             ))}
+          </ul>
+        </Widget.Content>
+      </Widget>
+      <Widget>
+        <Widget.Content>
+          <h2>Ranking</h2>
+          <ul>
+            <li key={`ranking__Cab`}>
+              {'Posição Nome     Pontuação'}
+            </li>
+            {ranking.map((result, index) => (
+              <li key={`ranking__${index}`}>
+                {index + 1}{'    '}{result.name}{'   '}{result.enjoyment ? result.enjoyment * 100 : 0}
+              </li>
+            ))
+            }
           </ul>
         </Widget.Content>
       </Widget>
@@ -121,8 +171,8 @@ function QuestionWidget({
         alt="Descrição"
         style={{
           width: '100%',
-          height: '150px',
-          objectFit: 'cover',
+          height: '200px',
+          objectFit: 'contain',
         }}
         src={question.image}
       />
@@ -247,7 +297,7 @@ export default function QuizPage({questions}) {
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} name={name} />}
 
-        {/* <Widget>
+        <Widget>
           <Widget.Content>
             <CaixaFlex>
               <button onClick={() => setScreenState(screenStates.QUIZ)}>QUIZ</button>
@@ -255,7 +305,7 @@ export default function QuizPage({questions}) {
               <button onClick={() => setScreenState(screenStates.RESULT)}>RESULT</button>
             </CaixaFlex>
           </Widget.Content>  
-        </Widget>   */}
+        </Widget>  
 
       </QuizContainer>
     </QuizBackground>
