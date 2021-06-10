@@ -25,6 +25,21 @@ margin: auto;
 width: 100%;
 `;
 
+const GridRanking = styled.div`
+display: grid;
+grid-gap: 1rem;
+grid-template-columns: 1fr 4fr 1fr;
+`;
+
+function Ranking({posicao,nome,pontos}) {
+  return (
+    <GridRanking>
+      <div>{posicao}</div>
+      <div>{nome}</div>
+      <div>{pontos}</div>
+    </GridRanking>
+  )
+}
 
 function ResultWidget({ results, name }) {
   const router = useRouter()
@@ -107,11 +122,11 @@ function ResultWidget({ results, name }) {
           <h2>Ranking</h2>
           <ul>
             <li key={`ranking__Cab`}>
-              {'Posição Nome     Pontuação'}
+              <Ranking posicao="Posição" nome="Nome" pontos="Pontuação"/>
             </li>
             {ranking.map((result, index) => (
               <li key={`ranking__${index}`}>
-                {index + 1}{'    '}{result.name}{'   '}{result.enjoyment ? result.enjoyment * 100 : 0}
+                <Ranking posicao={index + 1} nome={result.name} pontos={result.enjoyment ? result.enjoyment * 100 : 0}/>
               </li>
             ))
             }
